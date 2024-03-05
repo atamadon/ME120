@@ -1,0 +1,12 @@
+name: md
+channels:
+  - defaults
+dependencies:
+  - mdanalysis
+  - mdanalysistests
+  - nglview
+  - openmm
+  - prody
+  - pylablib
+  - ipykernel
+prefix: C:\Users\Ali\anaconda3\envs\md
