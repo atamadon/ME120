@@ -54,10 +54,10 @@ def simulate_apple_fall(total_time: float = 10, mass: float = 0.3, initial_veloc
 
     ani = animation.FuncAnimation(fig, func=animate, frames=num_timesteps)
     plt.close()
-    # ani.save('results/apple_fall.gif', fps=1//timestep, writer='ffmpeg')
+    ani.save('results/apple_fall.mp4', fps=1//timestep, writer='ffmpeg')
 
     # # Use if ffmpeg is not installed
-    ani.save('apple_fall.gif', fps=1//timestep)
+    # ani.save('apple_fall.gif', fps=1//timestep)
 
 def simulate_three_particles(total_time: float = 10, mass: float = 1.0, ks: int = 5, r0: float = 1.0, timestep: float = 0.05):
     # Setup the figure and axes...
@@ -108,7 +108,7 @@ def simulate_three_particles(total_time: float = 10, mass: float = 1.0, ks: int 
     ani = animation.FuncAnimation(fig, animate, frames=num_timesteps)
     plt.close()
     ## this function will create a lot of *.png files in a folder '3Body_frames'
-    ani.save('results/3particles.gif', fps=1 // timestep)
+    ani.save('results/3particles.mp4', fps=1 // timestep)
 
     # # Use if ffmpeg is not installed
-    ani.save('3particles.gif', fps=1 // timestep)
+    # ani.save('3particles.gif', fps=1 // timestep)
