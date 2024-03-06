@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
+import os
 
 def simulate_apple_fall(total_time: float = 10, mass: float = 0.3, initial_velocity: float = -0.1, height: float = 553, timestep: float = 0.05):
     """
@@ -54,6 +55,11 @@ def simulate_apple_fall(total_time: float = 10, mass: float = 0.3, initial_veloc
 
     ani = animation.FuncAnimation(fig, func=animate, frames=num_timesteps)
     plt.close()
+
+    # Check if the results directory exists
+    if not os.path.exists('results'):
+        # Create the results directory
+        os.makedirs('results')
     ani.save('results/apple_fall.mp4', fps=1//timestep, writer='ffmpeg')
 
     # # Use if ffmpeg is not installed
@@ -107,6 +113,10 @@ def simulate_three_particles(total_time: float = 10, mass: float = 1.0, ks: int 
 
     ani = animation.FuncAnimation(fig, animate, frames=num_timesteps)
     plt.close()
+    # Check if the results directory exists
+    if not os.path.exists('results'):
+        # Create the results directory
+        os.makedirs('results')
     ## this function will create a lot of *.png files in a folder '3Body_frames'
     ani.save('results/3particles.mp4', fps=1 // timestep)
 
