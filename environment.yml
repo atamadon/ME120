@@ -10,4 +10,5 @@ dependencies:
   - mdanalysis
   - nglview
   - ffmpeg
+  - conda-forge::prody
 prefix: C:\Users\Ali\anaconda3\envs\md_1
