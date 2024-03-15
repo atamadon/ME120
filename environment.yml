@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.8
   - ipykernel
-  - matplotlib
+  - matplotlib  
   - numpy
   - conda-forge::openmm
   - mdanalysis
