@@ -91,7 +91,7 @@ def simulate_three_particles(total_time: float = 10, mass: float = 1.0, ks: int 
     r[0,2] = np.array([-1., 0.])
 
     def compute_forces(n):
-        '''The function computes forces on each pearticle at time step n'''
+        '''The function computes forces on each particle at time step n'''
         for i in range(3):
             for j in range(3):
                 if i != j:
